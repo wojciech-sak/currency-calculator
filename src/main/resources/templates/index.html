@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <header><title>Currency Calculator</title></header>
+    <body>
+        <div>USD to PLN conversion</div>
+        <tr th:if="${value!=0.0}">
+            <div th:text="${value}"></div>
+        </tr>
+
+        <form method="post" action="/convert" class="form-actions">
+            <input type="text" name="value" />
+            <input type="submit" value="Convert" />
+        </form>
+    </body>
+</html>
